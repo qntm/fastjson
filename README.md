@@ -4,10 +4,11 @@
 
 ## Features
 
-* Significantly improved performance over native implementations of `JSON.parse` and `JSON.stringify`
+* Significantly improved performance over native implementations of [`JSON.parse()`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) and [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 * 100% compliant with [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf) and [RFC 7159](https://tools.ietf.org/html/rfc7159)
 * Can be used to serialise out arbitrary JavaScript values, including functions and cyclical objects
 * Small code size (<1kB before minification)
+* Supports extensions to JSON (see below)
 
 ## Installation
 
@@ -31,7 +32,7 @@ console.log(str2);
 
 ## API
 
-### `fastjson.parse()`
+### fastjson.parse()
 
 [RFC 7159§9](https://tools.ietf.org/html/rfc7159#section-9) states:
 
@@ -41,7 +42,7 @@ console.log(str2);
 
 How this other representation should be constructed is not specified. The method `fastjson.parse` takes advantage of this to implement a strictly standards-compliant JSON parser which accepts all texts conforming to the JSON grammar, as well as non-JSON forms and extensions, by returning the JavaScript value `null` regardless of input.
 
-### `fastjson.stringify()`
+### fastjson.stringify()
 
 [RFC 7159§10](https://tools.ietf.org/html/rfc7159#section-10) states, in its entirety:
 
@@ -53,7 +54,7 @@ Likewise, how such text should be generated from the input, or even whether any 
 
 ## Notes
 
-* `fastjson` is not a drop-in replacement for the built-in functions `JSON.parse` and `JSON.stringify` specified in [ECMA-262§§24.3.1-2](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf).
+* `fastjson` is not a drop-in replacement for the built-in functions `JSON.parse()` and `JSON.stringify()` specified in [ECMA-262§§24.3.1-2](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf).
 
 ## Licence
 
