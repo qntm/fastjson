@@ -36,7 +36,7 @@ console.log(str2);
 
 [RFC 7159§9](https://tools.ietf.org/html/rfc7159#section-9) states:
 
-> 9.  Parsers
+> `9.`  Parsers
 > 
 > A JSON parser transforms a JSON text into another representation.  A JSON parser MUST accept all texts that conform to the JSON grammar. A JSON parser MAY accept non-JSON forms or extensions.
 
@@ -46,7 +46,7 @@ How this other representation should be constructed is not specified. The method
 
 [RFC 7159§10](https://tools.ietf.org/html/rfc7159#section-10) states, in its entirety:
 
-> 10.  Generators
+> `10.`  Generators
 
 > A JSON generator produces JSON text.  The resulting text MUST strictly conform to the JSON grammar.
 
