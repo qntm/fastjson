@@ -1,6 +1,6 @@
 {
 	"name": "fastjson",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A high-performance, standards-compliant JSON serialiser/deserialiser for JavaScript.",
 	"homepage": "https://github.com/ferno/fastjson",
 	"repository": {
