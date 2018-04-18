@@ -5,6 +5,7 @@
 ## Features
 
 * Significantly improved performance over native implementations of [`JSON.parse()`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) and [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+* Pure JavaScript source
 * 100% compliant with [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf) and [RFC 7159](https://tools.ietf.org/html/rfc7159)
 * Can be used to serialise out arbitrary JavaScript values, including functions and cyclical objects
 * Small code size (<1kB before minification)
