@@ -55,7 +55,7 @@ Likewise, how such text should be generated from the input, or even whether any 
 
 ## Notes
 
-* `fastjson` is not a drop-in replacement for the built-in functions `JSON.parse()` and `JSON.stringify()` specified in [ECMA-262§§24.3.1-2](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf).
+* `fastjson` is not a drop-in replacement for the built-in functions `JSON.parse()` and `JSON.stringify()` specified in [ECMA-262§§24.5.1-2](https://www.ecma-international.org/ecma-262/11.0/index.html#sec-json-object).
 
 ## Licence
 
