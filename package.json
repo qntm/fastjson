@@ -1,16 +1,28 @@
 {
-	"name": "fastjson",
-	"version": "1.0.2",
-	"description": "A high-performance, standards-compliant JSON serialiser/deserialiser for JavaScript.",
-	"homepage": "https://github.com/qntm/fastjson",
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/qntm/fastjson.git"
-	},
-	"main": "index.js",
-	"keywords": [
-		"json"
-	],
-	"author": "qntm",
-	"license": "MIT"
+  "name": "fastjson",
+  "version": "2.0.0",
+  "description": "A high-performance, standards-compliant JSON serialiser/deserialiser for JavaScript.",
+  "homepage": "https://github.com/qntm/fastjson",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/qntm/fastjson.git"
+  },
+  "main": "src",
+  "keywords": [
+    "json"
+  ],
+  "author": "qntm",
+  "license": "MIT",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "postpublish": "npm version patch && git push",
+    "pretest": "npx standard",
+    "test": "npx jest"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "standard": "^16.0.3"
+  }
 }
