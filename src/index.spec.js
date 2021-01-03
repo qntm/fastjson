@@ -1,6 +1,6 @@
 "use strict";
 
-var fastjson = require(".")
+var fastjson = require("./index.js")
 
 if (fastjson.parse("abdsfsal{}") !== null) {
 	throw Error();
