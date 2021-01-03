@@ -17,6 +17,7 @@
     "src"
   ],
   "scripts": {
-    "postpublish": "npm version patch && git push"
+    "postpublish": "npm version patch && git push",
+		"test": "node src/index.spec.js"
   }
 }
