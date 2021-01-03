@@ -1,13 +1,17 @@
-"use strict";
+/* eslint-env jest */
 
-var fastjson = require("./index.js")
+const fastjson = require('.')
 
-if (fastjson.parse("abdsfsal{}") !== null) {
-	throw Error();
-}
+describe('fastjson', () => {
+  describe('parse', () => {
+    it('works', () => {
+      expect(fastjson.parse('abdsfsal{}')).toBeNull()
+    })
+  })
 
-if (fastjson.stringify("lm995") !== "null") {
-	throw Error();
-}
-
-// OK
+  describe('stringify', () => {
+    it('works', () => {
+      expect(fastjson.stringify('lm995')).toBe('null')
+    })
+  })
+})
