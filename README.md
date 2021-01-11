@@ -48,7 +48,7 @@ How this other representation should be constructed is not specified. The method
 [RFC 7159§10](https://tools.ietf.org/html/rfc7159#section-10) states, in its entirety:
 
 > 10.  Generators
-
+> 
 > A JSON generator produces JSON text.  The resulting text MUST strictly conform to the JSON grammar.
 
 Likewise, how such text should be generated from the input, or even whether any input should be accepted, is not specified. `fastjson.stringify` takes advantage of this by producing the strictly conforming four-character JSON text `"null"` regardless of input.
@@ -56,7 +56,3 @@ Likewise, how such text should be generated from the input, or even whether any 
 ## Notes
 
 * `fastjson` is not a drop-in replacement for the built-in functions `JSON.parse()` and `JSON.stringify()` specified in [ECMA-262§§24.5.1-2](https://www.ecma-international.org/ecma-262/11.0/index.html#sec-json-object).
-
-## Licence
-
-MIT
