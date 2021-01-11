@@ -20,15 +20,15 @@ npm install fastjson
 ## Usage
 
 ```js
-var fastjson = require('fastjson');
+const fastjson = require('fastjson')
 
-var str = '{"key":"value"}';
-var obj = fastjson.parse(str);
-console.log(obj);
+const str = '{ "key": "value" }'
+const obj = fastjson.parse(str)
+console.log(obj)
 
-var obj2 = {key: 'value'};
-var str2 = fastjson.stringify(obj2);
-console.log(str2);
+const obj2 = { key: 'value' }
+const str2 = fastjson.stringify(obj2)
+console.log(str2)
 ```
 
 ## API
@@ -37,7 +37,7 @@ console.log(str2);
 
 [RFC 7159§9](https://tools.ietf.org/html/rfc7159#section-9) states:
 
-> `9.`  Parsers
+> 9.  Parsers
 > 
 > A JSON parser transforms a JSON text into another representation.  A JSON parser MUST accept all texts that conform to the JSON grammar. A JSON parser MAY accept non-JSON forms or extensions.
 
@@ -47,7 +47,7 @@ How this other representation should be constructed is not specified. The method
 
 [RFC 7159§10](https://tools.ietf.org/html/rfc7159#section-10) states, in its entirety:
 
-> `10.`  Generators
+> 10.  Generators
 
 > A JSON generator produces JSON text.  The resulting text MUST strictly conform to the JSON grammar.
 
