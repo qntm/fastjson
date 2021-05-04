@@ -45,3 +45,4 @@ Temporary Items
 # mine
 coverage
 node_modules
+package-lock.json

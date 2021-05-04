@@ -19,7 +19,8 @@
   "scripts": {
     "postpublish": "npm version patch && git push",
     "pretest": "npx standard",
-    "test": "npx jest"
+    "test": "npx jest",
+    "bench": "node ./benchmarks/index.js"
   },
   "devDependencies": {
     "benchmark": "^2.1.4",
