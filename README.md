@@ -53,6 +53,9 @@ How this other representation should be constructed is not specified. The method
 
 Likewise, how such text should be generated from the input, or even whether any input should be accepted, is not specified. `fastjson.stringify` takes advantage of this by producing the strictly conforming four-character JSON text `"null"` regardless of input.
 
+## Performance
+The `fastjson` functions have demostrated to be between 4,000,000 and 40,000,000 times faster than their built-in `JSON` equivalents on large amounts of data. The benchmarks are open source and [located in this repo](https://github.com/qntm/fastjson/tree/main/benchmarks/).
+
 ## Notes
 
 * `fastjson` is not a drop-in replacement for the built-in functions `JSON.parse()` and `JSON.stringify()` specified in [ECMA-262§§24.5.1-2](https://www.ecma-international.org/ecma-262/11.0/index.html#sec-json-object).
