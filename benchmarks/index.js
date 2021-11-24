@@ -1,13 +1,11 @@
-const fastjson = require('../src/index.js')
-const chance = new (require('chance'))()
-const Benchmark = require('benchmark')
+import benchmark from 'benchmark'
+import Chance from 'chance'
 
-const cyan = '\x1b[1m\x1b[36m'
-const reset = '\x1b[0m'
+import * as fastjson from '../src/index.js'
 
-console.log('Running benchmarks...')
+const chance = new Chance()
 
-/* Generate big array */
+// Generate big array
 const arr = new Array(2 ** 8).fill().map(() => {
   const obj = {}
 
@@ -16,27 +14,34 @@ const arr = new Array(2 ** 8).fill().map(() => {
     const value = chance.string({ length: 64 })
     obj[key] = value
   }
+
   return obj
 })
 
 const str = JSON.stringify(arr)
 
-function runSuite (func, arg, cb) {
-  const suite = new Benchmark.Suite()
-  suite.add(`fastjson.${func}`, () => {
-    fastjson[func](arg)
-  }).add(`JSON.${func}`, () => {
-    JSON[func](arg)
-  }).on('cycle', (event) => {
-    console.log(String(event.target))
-  }).on('complete', function () {
-    console.log(`${cyan}Fastest is: ${this.filter('fastest').map('name')}${reset}`)
-    if (cb) {
-      cb()
-    }
-  }).run({ async: true })
-}
+console.log('Running benchmarks...')
 
-runSuite('stringify', arr, () => {
-  runSuite('parse', str, null)
+const runSuite = (func, arg) => new Promise(resolve => {
+  const suite = new benchmark.Suite()
+
+  suite
+    .add(`fastjson.${func}`, () => {
+      fastjson[func](arg)
+    })
+    .add(`JSON.${func}`, () => {
+      JSON[func](arg)
+    })
+    .on('cycle', event => {
+      console.log(String(event.target))
+    })
+    .on('complete', function () {
+      console.log(`Fastest is: ${this.filter('fastest').map('name')}`)
+      console.log()
+      resolve()
+    })
+    .run({ async: true })
 })
+
+await runSuite('stringify', arr)
+await runSuite('parse', str)

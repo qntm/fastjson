@@ -1,4 +1,2 @@
-module.exports = {
-  parse: () => null,
-  stringify: () => 'null'
-}
+export const parse = () => null
+export const stringify = () => 'null'
