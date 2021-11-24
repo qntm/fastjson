@@ -1,13 +1,14 @@
 {
   "name": "fastjson",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "A high-performance, standards-compliant JSON serialiser/deserialiser for JavaScript.",
   "homepage": "https://github.com/qntm/fastjson",
   "repository": {
     "type": "git",
     "url": "git://github.com/qntm/fastjson.git"
   },
-  "main": "src",
+  "type": "module",
+  "main": "src/index.js",
   "keywords": [
     "json"
   ],
@@ -17,15 +18,17 @@
     "src"
   ],
   "scripts": {
+    "bench": "node ./benchmarks/index.js",
+    "mocha": "c8 --100 mocha",
     "postpublish": "npm version patch && git push",
-    "pretest": "npx standard",
-    "test": "npx jest",
-    "bench": "node ./benchmarks/index.js"
+    "standard": "standard",
+    "test": "npm run standard && npm run mocha"
   },
   "devDependencies": {
     "benchmark": "^2.1.4",
+    "c8": "^7.10.0",
     "chance": "^1.1.7",
-    "jest": "^27.0.3",
+    "mocha": "^9.1.3",
     "standard": "^16.0.3"
   }
 }
