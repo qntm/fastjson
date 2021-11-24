@@ -43,5 +43,7 @@ const runSuite = (func, arg) => new Promise(resolve => {
     .run({ async: true })
 })
 
-await runSuite('stringify', arr)
-await runSuite('parse', str)
+Promise.resolve().then(async () => {
+  await runSuite('stringify', arr)
+  await runSuite('parse', str)
+})
