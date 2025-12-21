@@ -19,10 +19,10 @@
   ],
   "scripts": {
     "bench": "node ./benchmarks/index.js",
-    "mocha": "c8 --100 mocha",
+    "unit": "c8 --100 mocha",
     "postpublish": "npm version patch && git push",
     "standard": "standard",
-    "test": "npm run standard && npm run mocha"
+    "test": "npm run standard && npm run unit"
   },
   "devDependencies": {
     "benchmark": "^2.1.4",
