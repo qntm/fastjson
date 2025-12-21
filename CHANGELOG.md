@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.0.0
+
+Support for Node.js 18 and lower is dropped.
+
 ## 3.x.x
 
 `fastjson` now distributes ES modules, not CommonJS modules.
