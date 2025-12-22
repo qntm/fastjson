@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "bench": "node ./benchmarks/index.js",
-    "unit": "c8 --100 mocha",
+    "unit": "c8 --100 node --test",
     "postpublish": "npm version patch && git push",
     "standard": "standard",
     "test": "npm run standard && npm run unit"
@@ -28,7 +28,6 @@
     "benchmark": "^2.1.4",
     "c8": "^10.1.2",
     "chance": "^1.1.7",
-    "mocha": "^11.0.0",
     "standard": "^17.0.0"
   }
 }
