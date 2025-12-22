@@ -1,6 +1,5 @@
-/* eslint-env mocha */
-
 import assert from 'node:assert/strict'
+import { describe, it } from 'node:test'
 
 import { parse, stringify } from '../src/index.js'
 
