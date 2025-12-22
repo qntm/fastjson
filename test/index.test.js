@@ -1,19 +1,19 @@
 /* eslint-env mocha */
 
-import assert from 'assert'
+import assert from 'node:assert/strict'
 
 import { parse, stringify } from '../src/index.js'
 
 describe('fastjson', () => {
   describe('parse', () => {
     it('works', () => {
-      assert.deepStrictEqual(parse('abdsfsal{}'), null)
+      assert.deepEqual(parse('abdsfsal{}'), null)
     })
   })
 
   describe('stringify', () => {
     it('works', () => {
-      assert.deepStrictEqual(stringify('lm995'), 'null')
+      assert.deepEqual(stringify('lm995'), 'null')
     })
   })
 })
