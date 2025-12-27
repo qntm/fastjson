@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "bench": "node ./benchmarks/index.js",
-    "unit": "node --test --experimental-test-coverage",
+    "unit": "node --test --experimental-test-coverage --test-coverage-functions=100",
     "postpublish": "npm version patch && git push",
     "standard": "standard",
     "test": "npm run standard && npm run unit"
